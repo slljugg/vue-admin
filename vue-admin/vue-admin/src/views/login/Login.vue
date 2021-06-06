@@ -43,7 +43,7 @@
 <script>
 import api from '../../api.js'
 export default {
-  name: '#login',
+  name: 'login',
   data() {
     return {
       // 登录表单绑定数据 :model='loginForm'
@@ -57,9 +57,9 @@ export default {
         username: [
           { required: true, message: '用户名不能为空', trigger: 'blur' },
           {
-            min: 5,
+            min: 3,
             max: 10,
-            message: '用户名长度在5到10个字符',
+            message: '用户名长度在3到10个字符',
             trigger: 'blur',
           },
         ],
@@ -67,9 +67,9 @@ export default {
         password: [
           { required: true, message: '密码不能为空', trigger: 'blur' },
           {
-            min: 5,
-            max: 10,
-            message: '密码长度在8到15个字符',
+            min: 6,
+            max: 15,
+            message: '密码长度在6到15个字符',
             trigger: 'blur',
           },
         ],
@@ -97,9 +97,8 @@ export default {
         // 状态码200登录成功  element写法
         this.$message.success('登录成功')
         // console.log(res)
-        // 保存token到sessionStorage
+        // 将res.data中的token设置上去
         window.sessionStorage.setItem('token', res.data.token)
-        // 跳转到home路由
         this.$router.push('/home')
       })
     },
@@ -109,7 +108,7 @@ export default {
 
 <style lang="scss" scoped>
 #login {
-  background-color: #5dbe8a;
+  background-color: #67C23A;
   height: 100%;
 }
 .login_box {
@@ -124,7 +123,7 @@ export default {
   .avatar_box {
     height: 160px;
     width: 160px;
-    border: 1px solid #eee;
+    border: 1px solid #909399;
     border-radius: 50%;
     padding: 10px;
     box-shadow: 0 0 10px #ddd;
@@ -136,7 +135,7 @@ export default {
       width: 100%;
       height: 100%;
       border-radius: 50%;
-      background-color: #eee;
+      background-color: #909399;
     }
   }
   .btns {
