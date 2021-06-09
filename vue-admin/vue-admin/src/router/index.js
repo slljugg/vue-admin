@@ -39,6 +39,36 @@ const routes = [
         name: 'roles',
         component: () => import('../components/power/Roles.vue')
       },
+      {
+        path: '/categories',
+        name: 'cate',
+        component: () => import('../components/goods/Cate.vue')
+      },
+      {
+        path: '/params',
+        name: 'params',
+        component: () => import('../components/goods/Params.vue')
+      },
+      {
+        path: '/goods',
+        name: 'list',
+        component: () => import('../components/goods/List.vue')
+      },
+      {
+        path: '/goods/add',
+        name: 'add',
+        component: () => import('../components/goods/Add.vue')
+      },
+      {
+        path: '/orders',
+        name: 'order',
+        component: () => import('../components/order/Order.vue')
+      },
+      {
+        path: '/reports',
+        name: 'report',
+        component: () => import('../components/report/Report.vue')
+      },
     ]
   },
 ]

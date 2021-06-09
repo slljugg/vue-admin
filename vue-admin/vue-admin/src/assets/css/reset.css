@@ -32,6 +32,12 @@ html {
   margin-top: 15px;
   font-size: 12px;
 }
+.el-steps {
+  margin: 20px 0; 
+}
+.el-step__title {
+  font-size: 13px;
+}
 /* Sections
    ========================================================================== */
 

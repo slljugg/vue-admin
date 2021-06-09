@@ -96,7 +96,7 @@
         :page-sizes="[1, 2, 5, 10]"
         :page-size="queryInfo.pagesize"
         layout="total, sizes, prev, pager, next, jumper"
-        :total="total"
+        :total="total" background
       >
       </el-pagination>
     </el-card>
@@ -286,8 +286,9 @@ export default {
       const { data: res } = await api.get('users', { params: this.queryInfo })
       if (res.meta.status !== 200) {
         this.$message.error(res.meta.msg)
+        return
       }
-      // console.log(res)
+      console.log(res)
       this.userlist = res.data.users
       this.total = res.data.total
     },
