@@ -283,7 +283,7 @@ export default {
   methods: {
     // 请求初始users数据
     async getUserList() {
-      const { data: res } = await api.get('users', { params: this.queryInfo })
+      const { data: res } = await api.get('userss', { params: this.queryInfo })
       if (res.meta.status !== 200) {
         this.$message.error(res.meta.msg)
         return

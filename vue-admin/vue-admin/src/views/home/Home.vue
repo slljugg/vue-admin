@@ -32,7 +32,7 @@
                 <!-- 图标 -->
                 <i :class="iconsObj[item.id]"></i>
                 <!-- 文本 -->
-                <span>{{item.authName}}</span>
+                <span>{{ item.authName }}</span>
               </template>
               <!-- 二级菜单 -->
               <el-menu-item :index="'/' + subItem.path" v-for="subItem in item.children" :key="subItem.id" @click="isactivePath('/' + subItem.path)">
